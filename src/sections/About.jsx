@@ -1,6 +1,8 @@
 import React from "react";
+import Cards from "./components/Cards";
 
 const About = () => {
+  const grid2Container = React.useRef(null);
   return (
     <section className="c-space section-spacing">
       <h2 className="text-heading">About Me</h2>
@@ -14,7 +16,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Sathira Nimhana</p>
             <p className="subtext">
-              Gameplay Programmer with 2+ years of hands-on experience in Unreal
+              Gameplay Programmer with 3+ years of hands-on experience in Unreal
               Engine (Blueprint & C++), specializing in first-person mechanics,
               system debugging, and immersive gameplay systems. Passionate about
               building high-quality, player-centric features in fast-paced dev
@@ -27,8 +29,16 @@ const About = () => {
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
-            <div className="flex items-center justify-center w-full h-full">
+            <div ref={grid2Container} className="flex items-center justify-center w-full h-full">
                 <p className="flex items-end text-5xl text-gray-500"> Games ARE Fun</p>
+                <Cards style={{rotate: "75deg", top: "60%", left: "45%"}} text="GRASP" containerRef={grid2Container}/>
+                <Cards style={{rotate: "-30deg", top: "30%", left: "20%"}} text="SOLID" containerRef={grid2Container}/>
+                <Cards style={{rotate: "90deg", bottom: "30%", left: "70%"}} text="Design" containerRef={grid2Container}/>
+                <Cards style={{rotate: "-45deg", top: "55%", left: "0%"}} text="Prototype" containerRef={grid2Container}/>
+                <Cards style={{rotate: "20deg", top: "10%", left: "38%"}} text="SRP" containerRef={grid2Container}/>
+                <Cards style={{rotate: "30deg", top: "70%", left: "70%"}} image="/assets/logos/cplusplus.svg" containerRef={grid2Container}/>
+                <Cards style={{rotate: "-45deg", top: "70%", left: "25%"}} image="/assets/logos/icons8-unreal-engine-64.png" containerRef={grid2Container}/>
+                <Cards style={{rotate: "-40deg", top: "5%", left: "10%"}} image="/assets/logos/react.svg" containerRef={grid2Container}/>
             </div>
         </div>
         {/* Grid 3 */}
